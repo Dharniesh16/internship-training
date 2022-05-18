@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center">
+        <h2>welcome to my Page</h2>
+     
+    </div>
+
+    <script>
+        class Student
+        {
+            constructor()
+
+            {
+                var name;
+                var marks;
+            }
+            getName()
+            {
+                return this.name;
+
+            }
+            setName(name)
+            {
+                this.name=name;
+
+            }
+            getMrks()
+            {
+                return this.marks;
+
+            }
+            setMarks(marks)
+            {
+                this.marks=marks;
+
+            }
+        }
+
+        var stud=new Student();
+        stud.setName("dharan");
+        stud.setMarks(180);
+        document.writeln(stud.getName()+" "+stud.getMrks());
+
+    </script>
+</body>
+</html>

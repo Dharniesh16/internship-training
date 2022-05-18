@@ -1,0 +1,41 @@
+create database december;
+ 
+show databases;
+drop database saless;
+ 
+use december;
+ 
+CreATE table hotel(id int, Name varchar(20),fathername varchar(20),City varchar(20));
+select * from hotel;
+ 
+insert into hotel values(1,'Ahmad','Ahmad','Banglore');
+update hotel set Name="Hummingbird" where id=2;
+ 
+insert into hotel values(2,'Ahsan','Ahmad','Banglore');
+insert into hotel values(3,'Mahmud','Abdullah','Hyderbad');
+ 
+update hotel set id = 6 where Name='Ahsan';
+alter table hotel add Grade varchar(25);
+ 
+delete from hotel where id=2;
+ 
+create table school(id int, Name varchar(20),fathername varchar(20),City varchar(20));
+select*from school;
+ 
+insert into school values(1,'ahmad','Ahmad','Banglore');
+insert into school values(4,'Ahmad','Ahmad','Hyedrabad');
+insert into school values(2,'Ahmad','Abdullah','Banglore');
+ 
+create database saless;
+use saless;
+ 
+create table orders (orderId int, CustomerID int, EmployeeId int);
+insert into orders values(10308,2,7);
+insert into orders values(10309,3,3);
+insert into orders values(10310,77,8);
+create table customers(CustomerId int , CustomerName varchar(20), ContactName varchar(20));
+insert into customers values(1,'Alferd','Maria');
+insert into customers values(2,'Ana Trujillo','Ana');
+insert into customers values(3,'Antonio','Moreno');
+ 
+select orders.EmployeeId, Customers.CustomerName from Orders inner join customers on orders.customerId = customers.CustomerId;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center">
+        <h2>Welcome To My Page</h2>
+
+    </div>
+
+    <script>
+        function Student(firstname, lastname){
+            this.FirstName = firstname || "Undefined"
+            this.LastName = lastname || "Undefined"
+        };
+
+        Student.prototype.getfullname = function(){
+             return this. FirstName + " " + this.LastName
+        }
+
+        function Player(firstname, lastname, team , rank){
+            Student.call(this , firstname , lastname)
+            this.Team = team || "Undefined"
+            this.Rank = rank || "Unedfined"
+        }
+
+        Player.prototype = new Student();
+        var Player1 = new Player("Ahmad","Ahmad","South",1)
+        alert(Player1.getfullname());
+        alert(Player1 instanceof Student);
+        alert(Player1 instanceof Player);
+
+
+        function myst (){
+            this.name = "Ahmad"
+            this.city = "Banglore"
+
+        }
+
+        myst.prototype.age= 15;
+
+        var obj1  = new myst();
+        alert(obj1.age)
+
+        var obj2 = new myst();
+        alert(obj2.age)
+
+    </script>
+</body>
+</html>
